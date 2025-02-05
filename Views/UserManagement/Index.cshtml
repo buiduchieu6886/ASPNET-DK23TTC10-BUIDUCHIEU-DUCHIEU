@@ -1,0 +1,78 @@
+﻿@model IEnumerable<AuctionSimWebsite.Models.User>
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Quản lý người dùng";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Quản lý người dùng</h2>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">@TempData["Message"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered text-center align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Tên đăng nhập</th>
+                    <th>Email</th>
+                    <th>Số dư (VNĐ)</th>
+                    <th>Vai trò</th>
+                    <th>Ngày tạo</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="7" class="text-center">Không có người dùng nào.</td>
+                    </tr>
+                }
+                else
+                {
+                    int index = 1;
+                    foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>@index</td>
+                            <td>@user.UserName</td>
+                            <td>@user.Email</td>
+                            <td>@string.Format("{0:N0} VNĐ", user.Balance)</td>
+                            <td>
+                                <span class="badge @((user.Role == "Admin") ? "bg-danger" : "bg-secondary")">@user.Role</span>
+                            </td>
+                            <td>@user.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>
+                                <a href="/Admin/UserManagement/Details/@user.Id" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-eye"></i> Chi tiết
+                                </a>
+                                <a href="/Admin/UserManagement/Edit/@user.Id" class="btn btn-sm btn-warning">
+                                    <i class="fas fa-edit"></i> Chỉnh sửa
+                                </a>
+                                @if (user.Role != "Admin")
+                                {
+                                    <form action="/Admin/UserManagement/Delete/@user.Id" method="post" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn xóa người dùng này?')">
+                                            <i class="fas fa-trash"></i> Xóa
+                                        </button>
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+                        index++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

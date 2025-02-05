@@ -1,0 +1,171 @@
+﻿@model IEnumerable<AuctionSimWebsite.Models.Auction>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Sim đang được đấu giá";
+}
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Danh sách Sim đang được đấu giá</h2>
+    <form method="get" action="" class="mb-4">
+        <div class="row">
+            <div class="col-md-4">
+                <select name="CarrierFilter" class="form-select">
+                    <option value="">-- Tất cả nhà mạng --</option>
+                    <option value="Viettel" @(ViewBag.CarrierFilter == "Viettel" ? "selected" : "")>Viettel</option>
+                    <option value="Vinaphone" @(ViewBag.CarrierFilter == "Vinaphone" ? "selected" : "")>Vinaphone</option>
+                    <option value="Mobiphone" @(ViewBag.CarrierFilter == "Mobiphone" ? "selected" : "")>Mobiphone</option>
+                    <option value="Vietnamobile" @(ViewBag.CarrierFilter == "Vietnamobile" ? "selected" : "")>Vietnamobile</option>
+                    <option value="Wintel" @(ViewBag.CarrierFilter == "Wintel" ? "selected" : "")>Wintel</option>
+                    <option value="iTelecom" @(ViewBag.CarrierFilter == "iTelecom" ? "selected" : "")>iTelecom</option>
+                    <option value="GMobile" @(ViewBag.CarrierFilter == "GMobile" ? "selected" : "")>GMobile</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">Lọc</button>
+            </div>
+        </div>
+    </form>
+    @if (!Model.Any())
+    {
+        <p class="text-muted text-center">Hiện không có phiên đấu giá nào đang diễn ra.</p>
+    }
+    else
+    {
+
+        <div class="row">
+            
+
+
+            @foreach (var auction in Model)
+            {
+                <div class="col-4">
+                    <div class="sim mb-24">
+                        <div class="sim__brand">
+                            @if (@auction.SimCard.Carrier == "Viettel")
+                            {
+                                <img class="img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/viettel.svg">
+                            }
+                            else if (@auction.SimCard.Carrier == "Vinaphone")
+                            {
+                                <img class="img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/vinaphone.svg">
+
+                            }
+                            else if (@auction.SimCard.Carrier == "Mobiphone")
+                            {
+                                <img class="img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/mobiphone.svg">
+
+                            }
+                            else if (@auction.SimCard.Carrier == "Vietnamobile")
+                            {
+                                <img class="img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/vietnamobile.svg">
+
+                            }
+                            else if (@auction.SimCard.Carrier == "Wintel")
+                            {
+                                <img class="img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/Wintel.svg">
+
+                            }
+                            else if (@auction.SimCard.Carrier == "iTelecom")
+                            {
+                                <img class="img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/iTelecom.svg">
+
+                            }
+                            else if (@auction.SimCard.Carrier == "GMobile")
+                            {
+                                <img class="img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/Gmobile.svg">
+                            }
+                            
+                        </div>
+                        <div class="sim__info">
+                            <div class="sim__number">
+                                @auction.SimCard.PhoneNumber
+                            </div>
+                            <div class="sim__price">
+                                @auction.HighestBid.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))
+                            </div>
+
+                        </div>
+                        <a class="sim__link" href="@Url.Action("AuctionDetail", "Auction", new { id = auction.Id })"></a>
+
+                    </div>
+                    
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<style>
+    .mb-24 {
+        margin-bottom: 24px !important;
+    }
+
+    .sim {
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        -webkit-box-shadow: 0 2px 0 0 #D1D7DF, 0 2px 8px 0 rgba(14, 32, 69, 0.06);
+        box-shadow: 0 2px 0 0 #D1D7DF, 0 2px 8px 0 rgba(14, 32, 69, 0.06);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 16px;
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        position: relative;
+    }
+
+    .sim__brand {
+        width: 56px;
+        height: 56px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 56px;
+        flex: 0 0 56px;
+        border-radius: 50%;
+        background-color: #F2F5F8;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .sim__info {
+        text-align: right;
+    }
+
+    .sim__link {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .sim__number {
+        font-size: 20px;
+    }
+
+    .sim__price {
+        font-size: 16px;
+        color: #007a57;
+        line-height: 26px;
+    }
+
+    .sim__brand img {
+        max-width: 80%;
+        max-height: 80%;
+        width: auto;
+        height: auto;
+    }
+</style>

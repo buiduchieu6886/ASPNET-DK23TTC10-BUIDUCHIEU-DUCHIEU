@@ -1,0 +1,30 @@
+﻿@model AuctionSimWebsite.Models.Auction
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Chi tiết phiên đấu giá";
+}
+
+<div class="container mt-4">
+    <h2>Chi tiết phiên đấu giá</h2>
+    <dl class="row">
+        <dt class="col-sm-3">Sim Card</dt>
+        <dd class="col-sm-9">@Model.SimCard.PhoneNumber</dd>
+
+        <dt class="col-sm-3">Giá thầu cao nhất</dt>
+        <dd class="col-sm-9">@Model.HighestBid.ToString("C")</dd>
+
+        <dt class="col-sm-3">Thời gian bắt đầu</dt>
+        <dd class="col-sm-9">@Model.StartTime.ToString("dd/MM/yyyy HH:mm")</dd>
+
+        <dt class="col-sm-3">Thời gian kết thúc</dt>
+        <dd class="col-sm-9">@Model.EndTime.ToString("dd/MM/yyyy HH:mm")</dd>
+
+        <dt class="col-sm-3">Trạng thái</dt>
+        <dd class="col-sm-9">@Model.Status</dd>
+
+        <dt class="col-sm-3">Người chiến thắng</dt>
+        <dd class="col-sm-9">@Model.Winner?.UserName ?? "Chưa có người thắng"</dd>
+    </dl>
+    <a href="/Auction/Index" class="btn btn-secondary">Quay lại</a>
+</div>

@@ -1,0 +1,57 @@
+﻿@model AuctionSimWebsite.Models.Auction
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Tạo phiên đấu giá";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Tạo mới phiên đấu giá</h2>
+
+    <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
+        <!-- Chọn Sim Card -->
+        <div class="mb-3">
+            <label for="SimCardId" class="form-label">Chọn Sim Card</label>
+            <select class="form-select" id="SimCardId" name="SimCardId" required>
+                @foreach (var simCard in ViewData["SimCards"] as IEnumerable<AuctionSimWebsite.Models.SimCard>)
+                {
+                    <option value="@simCard.Id">@simCard.PhoneNumber</option>
+                }
+            </select>
+        </div>
+
+        <!-- Thời gian bắt đầu -->
+        <div class="mb-3">
+            <label for="StartTime" class="form-label">Thời gian bắt đầu</label>
+            <input type="datetime-local" class="form-control" id="StartTime" name="StartTime" required />
+        </div>
+
+        <!-- Thời gian kết thúc -->
+        <div class="mb-3">
+            <label for="EndTime" class="form-label">Thời gian kết thúc</label>
+            <input type="datetime-local" class="form-control" id="EndTime" name="EndTime" required />
+        </div>
+
+        <!-- Giá khởi điểm -->
+        <div class="mb-3">
+            <label for="HighestBid" class="form-label">Giá khởi điểm (VNĐ)</label>
+            <input type="number" class="form-control" id="HighestBid" name="HighestBid" required />
+        </div>
+
+        <!-- Trạng thái -->
+        <div class="mb-3">
+            <label for="Status" class="form-label">Trạng thái</label>
+            <select class="form-select" id="Status" name="Status" required>
+                <option value="Active">Đang diễn ra</option>
+                <option value="Completed">Đã kết thúc</option>
+                <option value="Cancelled">Hủy</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-success">Tạo phiên đấu giá</button>
+        <a href="/Auction/Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

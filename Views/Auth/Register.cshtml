@@ -1,0 +1,106 @@
+﻿@model AuctionSimWebsite.ViewModels.RegisterViewModel
+
+@{
+    ViewBag.Title = "Đăng ký tài khoản";
+}
+
+<div class="container pb-5">
+    <div class="auth-content">
+        <h2>Đăng ký tài khoản</h2>
+
+        @using (Html.BeginForm("Register", "Auth", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label for="Username">Tên đăng nhập</label>
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "Nhập tên đăng nhập của bạn" })
+                @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Email">Email</label>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Nhập email của bạn" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label for="PhoneNumber">Số điện thoại</label>
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", placeholder = "Nhập số điện thoại của bạn" })
+                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label for="Password">Mật khẩu</label>
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Nhập mật khẩu của bạn" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="ConfirmPassword">Xác nhận mật khẩu</label>
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Nhập lại mật khẩu của bạn" })
+                @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+            </div>
+        }
+
+        <div class="form-footer text-center">
+            <p>Đã có tài khoản? <a href="@Url.Action("Login", "Auth")">Đăng nhập tại đây</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .auth-content {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
+        .auth-content h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, .5);
+        }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    .form-footer {
+        margin-top: 20px;
+    }
+
+        .form-footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .form-footer a:hover {
+                text-decoration: underline;
+            }
+</style>

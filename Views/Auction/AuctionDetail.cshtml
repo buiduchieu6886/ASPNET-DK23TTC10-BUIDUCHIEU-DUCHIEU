@@ -1,0 +1,212 @@
+﻿@model AuctionSimWebsite.Models.Auction
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Chi tiết phiên đấu giá";
+    var formattedBid = Model.HighestBid.ToString("C0", new System.Globalization.CultureInfo("vi-VN"));
+}
+<style>
+    .sim-card-detail {
+        border-radius: 16px;
+        background: #fff;
+        padding: 16px;
+        -webkit-box-shadow: 0 2px 0 0 #D1D7DF, 0 2px 8px 0 rgba(14, 32, 69, 0.06);
+        box-shadow: 0 2px 0 0 #D1D7DF, 0 2px 8px 0 rgba(14, 32, 69, 0.06);
+    }
+
+    .sim-card-detail__head {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .sim-card-detail__img {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 80px;
+        flex: 0 0 80px;
+        margin-right: 16px;
+        height: 60px;
+    }
+
+    .sim-card-detail__number {
+        font-weight: 800;
+        font-size: 32px;
+        color: #838FA3;
+    }
+
+    .sim-card-detail__price b {
+        font-weight: 800;
+        font-size: 20px;
+        color: #F88047;
+    }
+
+    .sim-card-detail__brand {
+        width: 80px;
+    }
+
+    .sim-card-detail__type {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        color: #171717;
+        margin-left: 16px;
+        position: relative;
+    }
+
+    .block-title {
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 40px;
+        color: #171717;
+    }
+</style>
+<div class="container mt-5">
+    <h1 class="block-title" style="margin-bottom: 24px">
+        Đấu giá sim
+    </h1>
+    <div class="sim-card-detail">
+        <div class="sim-card-detail__head mb-12">
+            
+            <img class="sim-card-detail__img img-delay" data-src="/img/svg/sim-card.svg" alt="sim-card" src="/img/svg/sim-card.svg">
+            <div class="sim-card-detail__number" id="simNumber" data-id="@Model.SimCard.PhoneNumber">
+                @Model.SimCard.PhoneNumber
+            </div>
+        </div>
+        <div class="sim-card-detail__price">
+            <b>@Model.HighestBid.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</b>
+        </div>
+        <div class="mt-8">
+            @if (@Model.SimCard.Carrier == "Viettel")
+            {
+                <img class="sim-card-detail__brand img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/viettel.svg">
+            }
+            else if (@Model.SimCard.Carrier == "Vinaphone")
+            {
+                <img class="sim-card-detail__brand img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/vinaphone.svg">
+
+            }
+            else if (@Model.SimCard.Carrier == "Mobiphone")
+            {
+                <img class="sim-card-detail__brand img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/mobiphone.svg">
+
+            }
+            else if (@Model.SimCard.Carrier == "Vietnamobile")
+            {
+                <img class="sim-card-detail__brand img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/vietnamobile.svg">
+
+            }
+            else if (@Model.SimCard.Carrier == "Wintel")
+            {
+                <img class="sim-card-detail__brand img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/Wintel.svg">
+
+            }
+            else if (@Model.SimCard.Carrier == "iTelecom")
+            {
+                <img class="sim-card-detail__brand img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/iTelecom.svg">
+
+            }
+            else if (@Model.SimCard.Carrier == "GMobile")
+            {
+                <img class="sim-card-detail__brand img-delay" data-src="/img/svg/viettel.svg" alt="Viettel" src="/img/svg/Gmobile.svg">
+            }
+            <div class="sim-card-detail__type">
+                <strong>Giá khởi điểm:</strong> @Model.StartingPrice.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))
+            </div>
+        </div>
+
+    </div>
+    <!-- Thêm hiệu ứng countdown timer -->
+    <div class="text-center mt-5">
+        <h4 class="text-muted">Thời gian còn lại:</h4>
+        <div id="countdown" class="display-4 text-danger font-weight-bold">
+            <span>@Model.EndTime.ToString("dd/MM/yyyy HH:mm")</span>
+        </div>
+    </div>
+    <form asp-action="PlaceBid" method="post" class="mt-4 shadow p-4 rounded bg-light" id="bidForm">
+        @Html.AntiForgeryToken() <!-- Đảm bảo thẻ này được thêm vào -->
+        <input type="hidden" name="auctionId" value="@Model.Id" />
+
+        <div class="form-group">
+            <label for="bidAmount" class="form-label font-weight-bold text-secondary">Nhập giá đấu (VND):</label>
+            <input type="number"
+                   class="form-control border-primary"
+                   id="bidAmount"
+                   name="bidAmount"
+                   min="@Model.HighestBid + 1000"
+                   placeholder="Nhập giá lớn hơn @formattedBid"
+                   required />
+        </div>
+
+        <button type="button" class="btn btn-success btn-lg btn-block mt-3">Đấu giá</button>
+    </form>
+
+
+
+</div>
+
+@section Scripts {
+    <script>
+        // Countdown Timer Logic
+        const endTime = new Date('@Model.EndTime.ToString("yyyy-MM-ddTHH:mm:ss")');
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeDiff = endTime - now;
+
+            if (timeDiff <= 0) {
+                countdownElement.innerHTML = "Phiên đấu giá đã kết thúc!";
+                clearInterval(countdownInterval);
+            } else {
+                const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `${hours} giờ ${minutes} phút ${seconds} giây`;
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        $(document).ready(function () {
+            // Xử lý khi nút Đấu giá được nhấn
+            $('button[type="button"]').on('click', function (event) {
+                event.preventDefault(); // Ngăn form gửi qua mặc định
+
+                // Lấy dữ liệu từ form
+                var formData = $('#bidForm').serialize(); // Lấy tất cả dữ liệu trong form
+                console.log(formData); // Kiểm tra dữ liệu có được lấy đúng
+
+                // Gửi request qua Ajax
+                $.ajax({
+                    url: '@Url.Action("PlaceBid", "Auction")', // Đảm bảo đường dẫn đúng
+                    type: 'POST',
+                    data: formData, // Gửi dữ liệu form
+                    success: function (response) {
+                        console.log(response); // Kiểm tra phản hồi từ server
+                        if (response.redirectToLogin) {
+                            // Chuyển hướng người dùng đến trang đăng nhập
+                            window.location.href = '@Url.Action("Login", "Auth")';
+                        } else if (response.success) {
+                            alert(response.message); // Hiển thị thông báo thành công
+                            location.reload(); // Reload lại trang hoặc bạn có thể redirect tùy ý
+                        } else {
+                            alert(response.message); // Hiển thị thông báo lỗi
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Đã xảy ra lỗi:', error); // Log lỗi chi tiết
+                        alert('Đã xảy ra lỗi: ' + error);
+                    }
+                });
+            });
+        });
+
+
+
+
+    </script>
+}

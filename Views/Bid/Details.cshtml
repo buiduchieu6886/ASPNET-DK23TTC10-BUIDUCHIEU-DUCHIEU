@@ -1,0 +1,26 @@
+﻿@model AuctionSimWebsite.Models.Bid
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Chi tiết Bid";
+}
+
+<div class="container mt-4">
+    <h2>Chi tiết Bid</h2>
+
+    <dl class="row">
+        <dt class="col-sm-3">Người đấu giá</dt>
+        <dd class="col-sm-9">@Model.User.UserName</dd>
+
+        <dt class="col-sm-3">Giá trị thầu</dt>
+        <dd class="col-sm-9">@Model.BidAmount.ToString("C")</dd>
+
+        <dt class="col-sm-3">Thời gian thầu</dt>
+        <dd class="col-sm-9">@Model.BidTime.ToString("dd/MM/yyyy HH:mm")</dd>
+
+        <dt class="col-sm-3">Phiên đấu giá</dt>
+        <dd class="col-sm-9">@Model.Auction.SimCard.PhoneNumber</dd>
+    </dl>
+
+    <a href="@Url.Action("Index", "Bid", new { auctionId = Model.AuctionId })" class="btn btn-secondary">Quay lại</a>
+</div>

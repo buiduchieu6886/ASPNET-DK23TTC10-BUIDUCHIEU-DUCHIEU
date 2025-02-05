@@ -1,0 +1,457 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\about.png",
+      "PackagePath": "staticwebassets\\img\\about.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\img\\apple-touch-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\hero-img.png",
+      "PackagePath": "staticwebassets\\img\\hero-img.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\app-1.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\app-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\app-2.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\app-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\app-3.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\app-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\books-1.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\books-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\books-2.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\books-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\books-3.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\books-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\branding-1.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\branding-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\branding-2.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\branding-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\branding-3.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\branding-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\product-1.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\product-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\product-2.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\product-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\portfolio\\product-3.jpg",
+      "PackagePath": "staticwebassets\\img\\portfolio\\product-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\services.jpg",
+      "PackagePath": "staticwebassets\\img\\services.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\svg\\Gmobile.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\Gmobile.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\svg\\Wintel.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\Wintel.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\svg\\iTelecom.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\iTelecom.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\svg\\mobiphone.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\mobiphone.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\svg\\sim-card.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\sim-card.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\svg\\vietnamobile.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\vietnamobile.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\svg\\viettel.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\viettel.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\svg\\vinaphone.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\vinaphone.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\team\\team-1.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\team\\team-2.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\team\\team-3.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\testimonials\\testimonials-1.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\testimonials\\testimonials-2.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\testimonials\\testimonials-3.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\testimonials\\testimonials-4.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\img\\testimonials\\testimonials-5.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonials\\testimonials-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\scss\\Readme.txt",
+      "PackagePath": "staticwebassets\\scss\\Readme.txt"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\aos\\aos.cjs.js",
+      "PackagePath": "staticwebassets\\vendor\\aos\\aos.cjs.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\aos\\aos.css",
+      "PackagePath": "staticwebassets\\vendor\\aos\\aos.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\aos\\aos.esm.js",
+      "PackagePath": "staticwebassets\\vendor\\aos\\aos.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\aos\\aos.js",
+      "PackagePath": "staticwebassets\\vendor\\aos\\aos.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\aos\\aos.js.map",
+      "PackagePath": "staticwebassets\\vendor\\aos\\aos.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap-icons\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap-icons\\bootstrap-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap-icons\\bootstrap-icons.json",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap-icons\\bootstrap-icons.json"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap-icons\\bootstrap-icons.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap-icons\\bootstrap-icons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap-icons\\bootstrap-icons.scss",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap-icons\\bootstrap-icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\css\\prb.txt",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\prb.txt"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\glightbox\\css\\glightbox.css",
+      "PackagePath": "staticwebassets\\vendor\\glightbox\\css\\glightbox.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\glightbox\\css\\glightbox.min.css",
+      "PackagePath": "staticwebassets\\vendor\\glightbox\\css\\glightbox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\glightbox\\js\\glightbox.js",
+      "PackagePath": "staticwebassets\\vendor\\glightbox\\js\\glightbox.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\glightbox\\js\\glightbox.min.js",
+      "PackagePath": "staticwebassets\\vendor\\glightbox\\js\\glightbox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\imagesloaded\\imagesloaded.pkgd.min.js",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\imagesloaded.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\isotope-layout\\isotope.pkgd.js",
+      "PackagePath": "staticwebassets\\vendor\\isotope-layout\\isotope.pkgd.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\isotope-layout\\isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets\\vendor\\isotope-layout\\isotope.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\php-email-form\\validate.js",
+      "PackagePath": "staticwebassets\\vendor\\php-email-form\\validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\purecounter\\purecounter_vanilla.js",
+      "PackagePath": "staticwebassets\\vendor\\purecounter\\purecounter_vanilla.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\purecounter\\purecounter_vanilla.js.map",
+      "PackagePath": "staticwebassets\\vendor\\purecounter\\purecounter_vanilla.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\swiper\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\vendor\\swiper\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\swiper\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\vendor\\swiper\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\AuctionSimWebsite\\AuctionSimWebsite\\wwwroot\\vendor\\swiper\\swiper-bundle.min.js.map",
+      "PackagePath": "staticwebassets\\vendor\\swiper\\swiper-bundle.min.js.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AuctionSimWebsite.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AuctionSimWebsite.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AuctionSimWebsite.props",
+      "PackagePath": "build\\AuctionSimWebsite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AuctionSimWebsite.props",
+      "PackagePath": "buildMultiTargeting\\AuctionSimWebsite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AuctionSimWebsite.props",
+      "PackagePath": "buildTransitive\\AuctionSimWebsite.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

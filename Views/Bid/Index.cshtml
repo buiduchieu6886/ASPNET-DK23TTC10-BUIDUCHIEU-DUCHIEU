@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AuctionSimWebsite.Models.Bid>
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Danh sách các bid";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Danh sách các bid</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Người đấu giá</th>
+                <th>Giá trị thầu</th>
+                <th>Thời gian thầu</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bid in Model)
+            {
+                <tr>
+                    <td>@bid.Id</td>
+                    <td>@bid.User.UserName</td>
+                    <td>@bid.BidAmount.ToString("C0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"))</td>
+                    <td>@bid.BidTime.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        <a href="@Url.Action("Details", "Bid", new { id = bid.Id })" class="btn btn-info btn-sm">Chi tiết</a>
+                        <form action="@Url.Action("Delete", "Bid", new { id = bid.Id })" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa bid này?')">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

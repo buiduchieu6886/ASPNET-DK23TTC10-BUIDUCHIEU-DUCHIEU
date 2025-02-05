@@ -1,0 +1,53 @@
+﻿@model AuctionSimWebsite.Models.SimCard
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Tạo Sim Card mới";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Tạo Sim Card mới</h2>
+
+    <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label for="PhoneNumber" class="form-label">Số điện thoại</label>
+            <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" placeholder="Nhập số điện thoại" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Carrier" class="form-label">Nhà mạng</label>
+            <select class="form-select" id="Carrier" name="Carrier" required>
+                <option value="">-- Chọn nhà mạng --</option>
+                @foreach (var carrier in ViewBag.Carriers as List<string>)
+                {
+                    <option value="@carrier">@carrier</option>
+                }
+            </select>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="Description" class="form-label">Mô tả</label>
+            <textarea class="form-control" id="Description" name="Description" placeholder="Nhập mô tả sim"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="StartingPrice" class="form-label">Giá khởi điểm (VND)</label>
+            <input type="number" class="form-control" id="StartingPrice" name="StartingPrice" placeholder="Nhập giá khởi điểm" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Status" class="form-label">Trạng thái</label>
+            <select class="form-select" id="Status" name="Status" required>
+                <option value="Active">Đang diễn ra</option>
+                <option value="Sold">Đã bán</option>
+                <option value="Inactive">Hết hạn</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Tạo Sim Card</button>
+        <a href="/SimCard/Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

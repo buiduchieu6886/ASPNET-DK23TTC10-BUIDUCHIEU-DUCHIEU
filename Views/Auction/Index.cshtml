@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AuctionSimWebsite.Models.Auction>
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Danh sách các phiên đấu giá";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Danh sách phiên đấu giá</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Sim Card</th>
+                <th>Giá thầu cao nhất</th>
+                <th>Thời gian bắt đầu</th>
+                <th>Thời gian kết thúc</th>
+                <th>Trạng thái</th>
+                <th>Chi tiết</th>
+                <th>Quản lý đấu giá</th> <!-- Cột mới cho nút quản lý đấu giá -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var auction in Model)
+            {
+                <tr>
+                    <td>@auction.Id</td>
+                    <td>@auction.SimCard.PhoneNumber</td>
+                    <td>@auction.HighestBid.ToString("C0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"))</td>
+
+                    <td>@auction.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@auction.EndTime.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@auction.Status</td>
+                    <td>
+                        <a href="@Url.Action("Details", "Auction", new { id = auction.Id })" class="btn btn-primary btn-sm">Chi tiết</a>
+                        <form action="@Url.Action("Delete", "Auction", new { id = auction.Id })" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</button>
+                        </form>
+                    </td>
+                    <td>
+                        <!-- Nút Quản lý đấu giá -->
+                        <a href="@Url.Action("Index", "Bid", new { auctionId = auction.Id })" class="btn btn-info btn-sm">Quản lý đấu giá</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

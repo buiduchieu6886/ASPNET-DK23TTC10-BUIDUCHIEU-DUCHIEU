@@ -1,0 +1,22 @@
+﻿@model AuctionSimWebsite.Models.Bid
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Tạo Bid mới";
+}
+
+<div class="container mt-4">
+    <h2>Tạo Bid mới</h2>
+
+    <form asp-action="Create" method="post" asp-route-auctionId="@ViewData["AuctionId"]">
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label for="BidAmount" class="form-label">Giá trị thầu</label>
+            <input type="number" class="form-control" id="BidAmount" name="BidAmount" required />
+        </div>
+
+        <button type="submit" class="btn btn-success">Đặt thầu</button>
+        <a href="@Url.Action("Index", "Auction")" class="btn btn-secondary">Quay lại</a>
+    </form>
+</div>

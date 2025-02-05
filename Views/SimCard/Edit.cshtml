@@ -1,0 +1,46 @@
+﻿@model AuctionSimWebsite.Models.SimCard
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Chỉnh sửa Sim Card";
+}
+
+<div class="container mt-4">
+    <h2>Chỉnh sửa Sim Card</h2>
+
+    <form asp-action="Edit" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label for="PhoneNumber" class="form-label">Số điện thoại</label>
+            <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Carrier" class="form-label">Nhà mạng</label>
+            <input type="text" class="form-control" id="Carrier" name="Carrier" value="@Model.Carrier" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Description" class="form-label">Mô tả</label>
+            <textarea class="form-control" id="Description" name="Description">@Model.Description</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="StartingPrice" class="form-label">Giá khởi điểm</label>
+            <input type="number" class="form-control" id="StartingPrice" name="StartingPrice" value="@Model.StartingPrice" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Status" class="form-label">Trạng thái</label>
+            <select class="form-select" id="Status" name="Status" required>
+                <option value="Active" @(Model.Status == "Active" ? "selected" : "")>Đang diễn ra</option>
+                <option value="Sold" @(Model.Status == "Sold" ? "selected" : "")>Đã bán</option>
+                <option value="Inactive" @(Model.Status == "Inactive" ? "selected" : "")>Hết hạn</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Lưu thay đổi</button>
+        <a href="/SimCard/Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

@@ -1,0 +1,47 @@
+﻿@model AuctionSimWebsite.Models.User
+
+@{
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    ViewData["Title"] = "Chi tiết người dùng";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Chi tiết người dùng</h2>
+        </div>
+        <div class="card-body bg-light">
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <th class="text-end" style="width: 30%;">Tên đăng nhập:</th>
+                        <td class="text-start">@Model.UserName</td>
+                    </tr>
+                    <tr>
+                        <th class="text-end">Email:</th>
+                        <td class="text-start">@Model.Email</td>
+                    </tr>
+                    <tr>
+                        <th class="text-end">Số dư:</th>
+                        <td class="text-start">@string.Format("{0:N0} VNĐ", Model.Balance)</td>
+                    </tr>
+                    <tr>
+                        <th class="text-end">Vai trò:</th>
+                        <td class="text-start">
+                            <span class="badge @((Model.Role == "Admin") ? "bg-danger" : "bg-secondary")">@Model.Role</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-end">Ngày tạo:</th>
+                        <td class="text-start">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer text-center">
+            <a href="/Admin/UserManagement/Index" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </div>
+</div>
